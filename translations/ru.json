@@ -1,0 +1,25 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "data": {
+          "name": "Название"
+        },
+        "description": "Настройте HA Integration Mobile Extra для добавления новых сенсоров в интеграцию мобильного приложения.",
+        "title": "HA Integration Mobile Extra"
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": {
+          "name": "Название"
+        },
+        "description": "Настройте параметры HA Integration Mobile Extra.",
+        "title": "Параметры HA Integration Mobile Extra"
+      }
+    }
+  },
+  "title": "HA Integration Mobile Extra"
+} 

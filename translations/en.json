@@ -1,0 +1,25 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "data": {
+          "name": "Name"
+        },
+        "description": "Set up HA Integration Mobile Extra to add new sensors to mobile app integration.",
+        "title": "HA Integration Mobile Extra"
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": {
+          "name": "Name"
+        },
+        "description": "Configure HA Integration Mobile Extra options.",
+        "title": "HA Integration Mobile Extra Options"
+      }
+    }
+  },
+  "title": "HA Integration Mobile Extra"
+} 
