@@ -1,13 +1,23 @@
 #!/bin/bash
 set -e
 
-# Получаем версию из manifest.json
-VERSION=$(jq -r .version custom_components/ha_integration_mobile_extra/manifest.json)
-TAG="v$VERSION"
+# Получаем текущую версию из manifest.json
+CUR_VERSION=$(jq -r .version custom_components/ha_integration_mobile_extra/manifest.json)
+IFS='.' read -r MAJOR MINOR PATCH <<< "$CUR_VERSION"
+NEW_PATCH=$((PATCH+1))
+NEW_VERSION="$MAJOR.$MINOR.$NEW_PATCH"
+TAG="v$NEW_VERSION"
+
+# Обновляем версию в manifest.json
+jq ".version = \"$NEW_VERSION\"" custom_components/ha_integration_mobile_extra/manifest.json > tmp_manifest.json && mv tmp_manifest.json custom_components/ha_integration_mobile_extra/manifest.json
+
+git add custom_components/ha_integration_mobile_extra/manifest.json
+git commit -m "release: v$NEW_VERSION"
+git push
 
 # Проверяем, есть ли уже такой тег
 if git rev-parse "$TAG" >/dev/null 2>&1; then
-  echo "Тег $TAG уже существует. Увеличьте версию в manifest.json."
+  echo "Тег $TAG уже существует."
   exit 1
 fi
 
