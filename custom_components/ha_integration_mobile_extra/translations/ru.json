@@ -3,9 +3,10 @@
     "step": {
       "user": {
         "data": {
-          "name": "Название"
+          "name": "Название",
+          "selected_devices": "Выберите мобильные устройства"
         },
-        "description": "Настройте HA Integration Mobile Extra для добавления новых сенсоров в интеграцию мобильного приложения.",
+        "description": "Настройте HA Integration Mobile Extra для добавления новых сенсоров в интеграцию мобильного приложения. Выберите мобильные устройства для мониторинга.",
         "title": "HA Integration Mobile Extra"
       }
     }
@@ -14,9 +15,10 @@
     "step": {
       "init": {
         "data": {
-          "name": "Название"
+          "name": "Название",
+          "selected_devices": "Выберите мобильные устройства"
         },
-        "description": "Настройте параметры HA Integration Mobile Extra.",
+        "description": "Настройте параметры HA Integration Mobile Extra. Выберите мобильные устройства для мониторинга.",
         "title": "Параметры HA Integration Mobile Extra"
       }
     }
