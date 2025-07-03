@@ -51,6 +51,7 @@ class MobileExtraSensor(SensorEntity):
         self._attr_native_value = "Ready"
         self._attr_icon = "mdi:cellphone-cog"
         self._attr_should_poll = False
+        self._attr_entity_category = None
 
     @property
     def native_value(self) -> StateType:
