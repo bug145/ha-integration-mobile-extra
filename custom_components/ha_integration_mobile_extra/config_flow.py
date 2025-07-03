@@ -73,8 +73,11 @@ class HaIntegrationMobileExtraConfigFlow(config_entries.ConfigFlow, domain=DOMAI
             ]
             
             for entry in mobile_app_entries:
-                device_name = entry.data.get("device_name", entry.title)
-                devices[entry.entry_id] = device_name
+                # Get the device_id from the entry data
+                device_id = entry.data.get("device_id")
+                if device_id:
+                    device_name = entry.data.get("device_name", entry.title)
+                    devices[device_id] = device_name
                 
         except Exception:
             # If mobile_app is not available, return empty dict
