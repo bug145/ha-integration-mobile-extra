@@ -6,7 +6,7 @@
           "name": "Название",
           "selected_devices": "Выберите мобильные устройства"
         },
-        "description": "Настройте HA Integration Mobile Extra для добавления новых сенсоров в интеграцию мобильного приложения. Выберите мобильные устройства для мониторинга.",
+        "description": "Настройте HA Integration Mobile Extra для добавления дополнительных сенсоров к вашим устройствам мобильного приложения. Выберите мобильные устройства для добавления сенсоров.",
         "title": "HA Integration Mobile Extra"
       }
     }
@@ -18,7 +18,7 @@
           "name": "Название",
           "selected_devices": "Выберите мобильные устройства"
         },
-        "description": "Настройте параметры HA Integration Mobile Extra. Выберите мобильные устройства для мониторинга.",
+        "description": "Настройте параметры HA Integration Mobile Extra. Выберите мобильные устройства для добавления сенсоров.",
         "title": "Параметры HA Integration Mobile Extra"
       }
     }

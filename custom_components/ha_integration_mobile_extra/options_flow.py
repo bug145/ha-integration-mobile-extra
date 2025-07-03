@@ -28,14 +28,20 @@ class HaIntegrationMobileExtraOptionsFlow(config_entries.OptionsFlow):
         self.mobile_devices = await self._get_mobile_devices(self.hass)
         
         if user_input is not None:
-            return self.async_create_entry(
-                title="",
-                data={
-                    CONF_NAME: user_input.get(CONF_NAME, DEFAULT_NAME),
-                    CONF_SELECTED_DEVICES: user_input.get(CONF_SELECTED_DEVICES, []),
-                    CONF_DEVICE_NAMES: self.mobile_devices,
-                },
+            # Update the config entry data
+            new_data = dict(self.config_entry.data)
+            new_data.update({
+                CONF_NAME: user_input.get(CONF_NAME, DEFAULT_NAME),
+                CONF_SELECTED_DEVICES: user_input.get(CONF_SELECTED_DEVICES, []),
+                CONF_DEVICE_NAMES: self.mobile_devices,
+            })
+            
+            # Update the config entry
+            self.hass.config_entries.async_update_entry(
+                self.config_entry, data=new_data
             )
+            
+            return self.async_create_entry(title="", data={})
 
         # Create schema with checkboxes for mobile devices
         schema_dict = {

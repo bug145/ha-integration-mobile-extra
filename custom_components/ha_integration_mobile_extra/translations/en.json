@@ -6,7 +6,7 @@
           "name": "Name",
           "selected_devices": "Select Mobile Devices"
         },
-        "description": "Set up HA Integration Mobile Extra to add new sensors to mobile app integration. Select which mobile devices to monitor.",
+        "description": "Set up HA Integration Mobile Extra to add extra sensors to your mobile app devices. Select which mobile devices to add sensors to.",
         "title": "HA Integration Mobile Extra"
       }
     }
@@ -18,7 +18,7 @@
           "name": "Name",
           "selected_devices": "Select Mobile Devices"
         },
-        "description": "Configure HA Integration Mobile Extra options. Select which mobile devices to monitor.",
+        "description": "Configure HA Integration Mobile Extra options. Select which mobile devices to add sensors to.",
         "title": "HA Integration Mobile Extra Options"
       }
     }
