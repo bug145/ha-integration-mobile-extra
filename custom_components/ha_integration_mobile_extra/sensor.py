@@ -8,7 +8,7 @@ from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.typing import StateType
 from homeassistant.const import CONF_NAME
 
-from .const import DOMAIN
+from .const import DOMAIN, DEFAULT_NAME
 
 
 async def async_setup_entry(
@@ -26,7 +26,7 @@ class MobileExtraSensor(SensorEntity):
     def __init__(self, config_entry: ConfigEntry) -> None:
         """Initialize the sensor."""
         self.config_entry = config_entry
-        self._attr_name = config_entry.data.get(CONF_NAME, "Mobile Extra Sensor")
+        self._attr_name = config_entry.data.get(CONF_NAME, DEFAULT_NAME)
         self._attr_unique_id = f"{config_entry.entry_id}_mobile_extra"
         self._attr_native_value = "Ready"
 
